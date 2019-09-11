@@ -31,6 +31,7 @@ namespace AppConfigDemo
                                {
                                    refresh.Register("TestApp:Settings:BackgroundColor")
                                           .Register("TestApp:Settings:FontColor")
+                                          .Register("TestApp:Settings:FontSize")
                                           .Register("TestApp:Settings:Message");
                                })
                                .UseFeatureFlags();

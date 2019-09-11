@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AppConfigDemo.Models;
 using Microsoft.AspNetCore.Mvc;
-using AppConfigDemo.Models;
 using Microsoft.Extensions.Options;
+using System.Diagnostics;
 
 namespace AppConfigDemo.Controllers
 {
