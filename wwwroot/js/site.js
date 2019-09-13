@@ -1,4 +1,12 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var connection = new signalR.HubConnectionBuilder().withUrl("/NotificationHub").build();
 
-// Write your JavaScript code.
+
+connection.on("Notification", function (message) {
+    console.log(message);
+    document.getElementById("configMessage").innerText(message);
+});
+
+connection.start().then(function () {
+}).catch(function (err) {
+    return console.error(err.toString());
+});

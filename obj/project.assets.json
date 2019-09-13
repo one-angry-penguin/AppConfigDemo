@@ -1579,6 +1579,22 @@
           "lib/netstandard2.0/Microsoft.Azure.AppConfiguration.AspNetCore.dll": {}
         }
       },
+      "Microsoft.Azure.EventGrid/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "[2.3.18, 3.0.0)",
+          "Microsoft.Rest.ClientRuntime.Azure": "[3.3.18, 4.0.0)",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.3",
+          "System.Net.Http": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.4/Microsoft.Azure.EventGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microsoft.Azure.EventGrid.dll": {}
+        }
+      },
       "Microsoft.Azure.Management.ResourceManager/2.0.0-preview": {
         "type": "package",
         "dependencies": {
@@ -2826,11 +2842,11 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Rest.ClientRuntime/2.3.13": {
+      "Microsoft.Rest.ClientRuntime/2.3.18": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "9.0.1"
+          "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
           "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll": {}
@@ -2839,12 +2855,12 @@
           "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll": {}
         }
       },
-      "Microsoft.Rest.ClientRuntime.Azure/3.3.15": {
+      "Microsoft.Rest.ClientRuntime.Azure/3.3.18": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Rest.ClientRuntime": "[2.3.12, 3.0.0)",
+          "Microsoft.Rest.ClientRuntime": "[2.3.17, 3.0.0)",
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "9.0.1"
+          "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
           "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll": {}
@@ -6252,6 +6268,19 @@
         "microsoft.azure.appconfiguration.aspnetcore.nuspec"
       ]
     },
+    "Microsoft.Azure.EventGrid/3.2.0": {
+      "sha512": "2WEtmFjIeyIjkxvfHp+V/X89mGZnN58ZUL3fDbfrQ4USkcCN/GJ4aggC+syYW1Z5UbDA9Q9TE1DSvOM5B4WmCQ==",
+      "type": "package",
+      "path": "microsoft.azure.eventgrid/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.EventGrid.dll",
+        "lib/netstandard1.4/Microsoft.Azure.EventGrid.dll",
+        "microsoft.azure.eventgrid.3.2.0.nupkg.sha512",
+        "microsoft.azure.eventgrid.nuspec"
+      ]
+    },
     "Microsoft.Azure.Management.ResourceManager/2.0.0-preview": {
       "sha512": "ix0FAgtKX2upk+G3bnC3mjyUM8iaIEirXghG2RM/qSMVh0MMLcX1H7nhjumy3PaZ/OEHplpu0axz/9Vj2mF4wQ==",
       "type": "package",
@@ -7822,10 +7851,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Rest.ClientRuntime/2.3.13": {
-      "sha512": "relAkh+HJwWLLemEpVrjlrGSnxokivP5Z1elBuZMXdfXDiZJ9MaeA1m9roSYxeTzfICvX+fSKBJhXAhIpPareQ==",
+    "Microsoft.Rest.ClientRuntime/2.3.18": {
+      "sha512": "daE2vz5eNmiUbx8Lm0DArlKfKVtH3IzSteR0N+AJJ7cDgj32LcFudGx9Vm0bFelmiEZ3nO4Y7XTk2nfjUK/uCg==",
       "type": "package",
-      "path": "microsoft.rest.clientruntime/2.3.13",
+      "path": "microsoft.rest.clientruntime/2.3.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7835,14 +7864,14 @@
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.xml",
-        "microsoft.rest.clientruntime.2.3.13.nupkg.sha512",
+        "microsoft.rest.clientruntime.2.3.18.nupkg.sha512",
         "microsoft.rest.clientruntime.nuspec"
       ]
     },
-    "Microsoft.Rest.ClientRuntime.Azure/3.3.15": {
-      "sha512": "QcQpT/PYv9djXkvym2nWgtuTJZB7oFlr1bq7DyFGezxjjpJd5aZ9+QhkakEDmJdsIF/kHmyAaLsNgta58Sm3PQ==",
+    "Microsoft.Rest.ClientRuntime.Azure/3.3.18": {
+      "sha512": "pCtem10PRQYvzRiwJVInsccsqB0NrTjW83NF3zWk1LpN3IS0AneZKq89RyogDT7mRMT1Li/mLY8N8kU6RAiK0g==",
       "type": "package",
-      "path": "microsoft.rest.clientruntime.azure/3.3.15",
+      "path": "microsoft.rest.clientruntime.azure/3.3.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7852,7 +7881,7 @@
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.runtimeconfig.json",
         "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.xml",
-        "microsoft.rest.clientruntime.azure.3.3.15.nupkg.sha512",
+        "microsoft.rest.clientruntime.azure.3.3.18.nupkg.sha512",
         "microsoft.rest.clientruntime.azure.nuspec"
       ]
     },
@@ -13497,7 +13526,9 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.AspNetCore.SignalR >= 1.1.0",
       "Microsoft.Azure.AppConfiguration.AspNetCore >= 2.0.0-preview-009470001-12",
+      "Microsoft.Azure.EventGrid >= 3.2.0",
       "Microsoft.FeatureManagement.AspNetCore >= 1.0.0-preview-009000001-1251",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3"
@@ -13555,9 +13586,17 @@
             "target": "Package",
             "version": "[2.2.0, )"
           },
+          "Microsoft.AspNetCore.SignalR": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "Microsoft.Azure.AppConfiguration.AspNetCore": {
             "target": "Package",
             "version": "[2.0.0-preview-009470001-12, )"
+          },
+          "Microsoft.Azure.EventGrid": {
+            "target": "Package",
+            "version": "[3.2.0, )"
           },
           "Microsoft.FeatureManagement.AspNetCore": {
             "target": "Package",
