@@ -8,5 +8,6 @@ namespace AppConfigDemo.Models
     public class AppConfigMessage
     {
         public string Key { get; set; }
+        public string Value { get; set; }
     }
 }

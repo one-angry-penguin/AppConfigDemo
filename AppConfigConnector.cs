@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +9,7 @@ using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace AppConfigDemo
 {
@@ -18,17 +20,18 @@ namespace AppConfigDemo
             {
                 var request = new HttpRequestMessage()
                 {
-                    RequestUri = new Uri($"{config["ConnectionStrings:AppConfig"]}/kv/{key}"),
+                    RequestUri = new Uri($"{config["AppConfig:Endpoint"]}/kv/{key}"),
                     Method = HttpMethod.Get
                 };
 
+                //return request.RequestUri.ToString();
                 //
                 // Sign the request
-                request.Sign(config["AppConfig:Key"], System.Text.Encoding.Unicode.GetBytes(config["AppConfig:Secret"]));
+                request.Sign(config["AppConfig:Key"], Convert.FromBase64String(config["AppConfig:Secret"]));
 
                 var response = await client.SendAsync(request);
 
-                return response.Content.ToString();
+                return await response.Content.ReadAsStringAsync();
             }
         }
     }

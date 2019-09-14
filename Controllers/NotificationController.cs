@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using AppConfigDemo.Hubs;
@@ -28,7 +29,7 @@ namespace AppConfigDemo.Controllers
 
         [HttpPost]
         [Route("api/NotificationHandler")]
-        public IActionResult Post([FromBody]object request)
+        public async Task<IActionResult> Post([FromBody]object request)
         {
             //Deserializing the request 
             EventGridSubscriber eventGridSubscriber = new EventGridSubscriber();
@@ -58,16 +59,18 @@ namespace AppConfigDemo.Controllers
                 }
                 else
                 {
-                    var message = eventGridEvent.Data.ToString();
+                    dynamic configMessage = eventGridEvent.Data;
 
-                   // if (configMessage.Key == "TestApp:Settings:Message")
-                    //{
-                        //var message = AppConfigConnector.GetValue(configMessage.Key, _config).Result;
+                    string key = configMessage.Key.ToString();
 
-                        object[] args = { message };
+                    if (configMessage.Key == "TestApp:Settings:Message")
+                    {
+                        var result = await AppConfigConnector.GetValue(key, _config);
 
-                     //   _hubContext.Clients.All.SendCoreAsync("SendMessage", args);
-                    //
+                        var message = JsonConvert.DeserializeObject<AppConfigMessage>(result);
+
+                        await _hubContext.Clients.All.SendAsync("SendMessage", message.Value);
+                    }
                 }
             }
 

@@ -1,9 +1,18 @@
-﻿var connection = new signalR.HubConnectionBuilder().withUrl("/NotificationHub").build();
+﻿var connection = new signalR
+    .HubConnectionBuilder()
+    .withUrl("/NotificationHub")
+    .configureLogging(signalR.LogLevel.Information)
+    .build();
 
 
 connection.on("Notification", function (message) {
     console.log(message);
-    document.getElementById("configMessage").innerText(message);
+    document.getElementById("configMessage").innerHTML = message;
+});
+
+connection.on("SendMessage", function (message) {
+    console.log(message);
+    document.getElementById("configMessage").innerHTML = message;
 });
 
 connection.start().then(function () {
