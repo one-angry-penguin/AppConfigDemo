@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\Talks\\AppConfigDemo\\AppConfigDemo.csproj": {}
+    "C:\\Source\\talks\\appconfig\\AppConfigDemo\\AppConfigDemo.csproj": {}
   },
   "projects": {
-    "C:\\Source\\Talks\\AppConfigDemo\\AppConfigDemo.csproj": {
+    "C:\\Source\\talks\\appconfig\\AppConfigDemo\\AppConfigDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\Talks\\AppConfigDemo\\AppConfigDemo.csproj",
+        "projectUniqueName": "C:\\Source\\talks\\appconfig\\AppConfigDemo\\AppConfigDemo.csproj",
         "projectName": "AppConfigDemo",
-        "projectPath": "C:\\Source\\Talks\\AppConfigDemo\\AppConfigDemo.csproj",
-        "packagesPath": "C:\\Users\\sasoucy\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\Talks\\AppConfigDemo\\obj\\",
+        "projectPath": "C:\\Source\\talks\\appconfig\\AppConfigDemo\\AppConfigDemo.csproj",
+        "packagesPath": "C:\\Users\\samar\\.nuget\\packages\\",
+        "outputPath": "C:\\Source\\talks\\appconfig\\AppConfigDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sasoucy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,45 +40,6 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.SignalR": {
-              "target": "Package",
-              "version": "[1.1.0, )"
-            },
-            "Microsoft.Azure.AppConfiguration.AspNetCore": {
-              "target": "Package",
-              "version": "[2.0.0-preview-009470001-12, )"
-            },
-            "Microsoft.Azure.EventGrid": {
-              "target": "Package",
-              "version": "[3.2.0, )"
-            },
-            "Microsoft.FeatureManagement.AspNetCore": {
-              "target": "Package",
-              "version": "[1.0.0-preview-009000001-1251, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[2.2.3, )"
-            }
-          },
           "imports": [
             "net461"
           ],
